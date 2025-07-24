@@ -1,4 +1,4 @@
-# Enable Oath Process and Single Sign On (SSO) Using Opensource KEYCLOAK and LDAP and Flask Application
+# Enable Oauth Process and Single Sign On (SSO) Using Opensource KEYCLOAK , LDAP and Flask Application
 
 ## Prerequisite
 You must familiar with below Tools and Technologies
@@ -130,7 +130,7 @@ clinet-Secret  has to be filled with this screen data
 }
 This file will be used in `apisso.py` File for Token Generation and following steps are for that
 ```
-## 3: Execute Python Code 
+## 3: Execute Python Code (Application Server)
 - apisso.py - This python process uses GET/POST - OAUTH Porocess
 ```
 python apisso.py
