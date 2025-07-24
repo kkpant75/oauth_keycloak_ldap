@@ -22,7 +22,7 @@ If docker compose file successfully deployed this will create 3 containers
 - phpldapadmin
 - keycloak
 
-![Containers](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/DockerContainer.png)
+![Containers](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/Images/DockerContainer.png)
 
 ### Login in LDAP Server
 Open Web URL http://localhost:8080 and Login Using
@@ -44,10 +44,7 @@ Logged in as: cn=admin,dc=myorg,dc=local
   ---> Create new entry here
 
 ```
-![LdapServer](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/ldpaUsers.png)
-
-
-
+![LdapServer](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/Images/ldpaUsers.png)
 
 
 #### Create New Group/User Under (Using **Create new entry here**)
