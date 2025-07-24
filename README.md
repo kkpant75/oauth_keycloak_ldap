@@ -61,7 +61,7 @@ And Users via	`Generic: Simple Security Object` in this exmaple users are create
 ![Create User](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/Images/UserCreate.png)
 
 ### KEYCLOACK (SSO Server)
-Login in SSO server http://localhost:8082 -Click `Administrative Console` and use below credentials for login
+Login in SSO server http://localhost:8082 -Click `Administration Console` and use below credentials for login
 ```
 user:admin
 password:admin
