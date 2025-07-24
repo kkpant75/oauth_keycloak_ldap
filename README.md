@@ -1,6 +1,8 @@
 # Enable Oath Process and Single Sign On (SSO) Using Opensource KEYCLOAK and LDAP and Flask Application
 
 ## Prerequisite
+You must familiar with below Tools and Technologies
+
 - Docker
 - LDAP/AD
 - Oauth Process
@@ -8,15 +10,22 @@
 - Python/CURL
 
 # Docker Compose File
+Docker Compose File is Composed With Below Systems/Servers 
 
-### Composed With
+**Please chnages exposed Ports as per your syetem needs in this POC 8080(LDAP) and 8082 (SSO) Are Configured**
 - LDAP Server
 - PHP LDAP Admin Web UI
 - Keycloak (SSO Server /Session Management)
 
-# BackeEnd Systems
+Execute Below Command To Enable Containers
 
-### LDAP
+```
+docker compose up -d
+```
+
+# Backend Systems
+
+## 1: LDAP
 If docker compose file successfully deployed this will create 3 containers 
 - openldap
 - phpldapadmin
@@ -60,7 +69,7 @@ And Users via	`Generic: Simple Security Object` in this exmaple users are create
 
 ![Create User](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/Images/UserCreate.png)
 
-### KEYCLOACK (SSO Server)
+## 2: KEYCLOACK (SSO Server)
 Login in SSO server http://localhost:8082 -Click `Administration Console` and use below credentials for login
 ```
 user:admin
@@ -121,11 +130,15 @@ clinet-Secret  has to be filled with this screen data
 }
 This file will be used in `apisso.py` File for Token Generation and following steps are for that
 ```
-# Execute Python Code 
+## 3: Execute Python Code 
 - apisso.py - This python process uses GET/POST - OAUTH Porocess
 ```
 python apisso.py
 ```
+# Frontend 
+
+### 1: Postman / Curl
+
 And Use Following Postman Activities to Get You `access_token` and User Access by passing this token as `Bearer` Token see examples down
 
 ### Generate Oauth Token -Access/Refresh Token
@@ -166,6 +179,7 @@ curl --location 'http://localhost:5000/private' \
     "message": "Welcome! You are authenticated via SSO."
 }
 ```
+## 2: Web SSO
 # Python Code
 - loginsso.py - This Python Code enables SSO for web based applications
 ```
