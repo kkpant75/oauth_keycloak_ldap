@@ -22,7 +22,7 @@ If docker compose file successfully deployed this will create 3 containers
 - phpldapadmin
 - keycloak
 
-![Containers](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/DockerContainer.png)
+![Containers](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/DockerContainer.png)
 
 ### Login in LDAP Server
 Open Web URL http://localhost:8080 and Login Using
@@ -44,7 +44,7 @@ Logged in as: cn=admin,dc=myorg,dc=local
   ---> Create new entry here
 
 ```
-![LdapServer](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/ldpaUsers.png)
+![LdapServer](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/ldpaUsers.png)
 
 
 
@@ -54,14 +54,14 @@ Logged in as: cn=admin,dc=myorg,dc=local
 Create New Group using `Generic: Posix Group` in our case it is named as 
 - **UsersKK**
 
-![Create Group](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/UserGroupCreate.png)
+![Create Group](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/UserGroupCreate.png)
 
 And Users via	`Generic: Simple Security Object` in this exmaple users are created under Group **UsersKK** as well as on root Level as detailed above
 - kpant
 - kout
 - ramesh
 
-![Create User](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/UserCreate.png)
+![Create User](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/UserCreate.png)
 
 ### KEYCLOACK (SSO Server)
 Login in SSO server http://localhost:8082 -Click `Administrative Console` and use below credentials for login
@@ -69,11 +69,11 @@ Login in SSO server http://localhost:8082 -Click `Administrative Console` and us
 user:admin
 password:admin
 ```
-![SSO Login Screen](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/KeyCloak-Screene.png)
+![SSO Login Screen](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/KeyCloak-Screene.png)
 
 ### Create New Realm 
 After Login Left Pan Click Down Arrow Button To `Create New Realm` in this POC its named as `kkrealm`
-![Create Realm](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/realmcreate.png)
+![Create Realm](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/realmcreate.png)
 
 ### Once New Realm Created Configure LDAP Server for User Authorization under `User Federation` for realm `kkrealm`
 ```
@@ -85,7 +85,7 @@ UUID LDAP attribute     uid
 ```
 Test KEYCLOACK Connectivity with LDAP Server And Sever Access as It shown in screen by providing above credentials
 
-![Ldap Configuration](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/LdapConfigure.png)
+![Ldap Configuration](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/LdapConfigure.png)
 
 # Create Client
 To Register Your Application with OAuth Server this is important Step
@@ -96,7 +96,7 @@ Name   					${flask-client}
 Valid redirect URIs 	http://localhost:5000/auth
 Web origins     		http://localhost:5000
 ```
-![Create Client](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/clientCreate.png)
+![Create Client](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/clientCreate.png)
 
 ### Important Step To Enable Application Authentication
 Turn on to this Radio Button To convert Public to `Confidential`
@@ -110,7 +110,7 @@ Create a File as `client_secrets.json` with below details
 
 
 clinet-Secret  has to be filled with this screen data 
-![Client Secret](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/clientSecret.png)
+![Client Secret](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/clientSecret.png)
 ```{
   "web": {
     "client_id": "flask-client",
@@ -176,7 +176,7 @@ python loginsso.py
 ```
 # Open http://localhost:5000/login
 On Successful Login Screen with appear as per this 
-![Web Screen](https://github.com/kkpant75/oauth_keycloak_ldap/blob/main/images/loginSuccess.png)
+![Web Screen](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/images/loginSuccess.png)
 ```
 Hello Kpant
 ```
