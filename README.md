@@ -66,7 +66,7 @@ Login in SSO server http://localhost:8082 -Click `Administrative Console` and us
 user:admin
 password:admin
 ```
-![SSO Login Screen](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/Images/KeyCloak-Screene.png)
+![SSO Login Screen](https://github.com/kkpant75/oauth_keycloak_ldap/blob/master/Images/KeyCloak-Screen.png)
 
 ### Create New Realm 
 After Login Left Pan Click Down Arrow Button To `Create New Realm` in this POC its named as `kkrealm`
