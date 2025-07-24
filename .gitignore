@@ -1,0 +1,5 @@
+# Allow only .py and .json files in ssoprocess
+ssoprocess/Include
+ssoprocess/Scripts
+ssoprocess/Lib
+ssoprocess/pyenv.cfg
