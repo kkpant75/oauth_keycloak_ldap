@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # mysql:
+    # image: mysql:8.0
+    # container_name: mysql-db
+    # environment:
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: testdb
+      # MYSQL_USER: user
+      # MYSQL_PASSWORD: password
+    # ports:
+      # - "3326:3306"
+    # volumes:
+      # - mysql_data_cache:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    container_name: redis-cache
+    ports:
+      - "6379:6379"
+
+  flask-api:
+    build: .
+    container_name: flask-app-cache
+    ports:
+      - "5001:5001"
+    depends_on:
+     # - mysql
+      - redis
+    environment:
+      DB_HOST: mysql
+      DB_PORT: 3306  # ✅ Add this
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_NAME: company
+      REDIS_HOST: redis
+    
+    networks:
+      - mysqltomongoflinkcdc_default
+      - cache_default
+volumes:
+  mysql_data_cache:
+  
+networks:
+  mysqltomongoflinkcdc_default:
+    external: true
+  cache_default:
+    external: true  
