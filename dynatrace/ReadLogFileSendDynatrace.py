@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     log_file_path = "C:\\Windows\\PFRO.log"  # Path to your log file
     log_file_path ="C:\Windows\Logs\WinREAgent\\setupact.log"
-    dynatrace_endpoint = "https://lsm93412.live.dynatrace.com/api/v2/logs/ingest"  # Your Dynatrace environment URL
-    api_token = "dt0c01.7EDLZFZ33DVD55XOQRJI6Z4L.BWK5LRASW3XNDY5X3V66XAGQKSAZJFXJPCJL5DGLZEUC5WUMZQ66MON5ITVAHX5R"  # Your Dynatrace API token with logs.ingest scope
+    dynatrace_endpoint = "https://lsm934.live.dynatrace.com/api/v2/logs/ingest"  # Your Dynatrace environment URL
+    api_token = ""  # Your Dynatrace API token with logs.ingest scope
 
     parse_and_send_from_file(log_file_path, dynatrace_endpoint, api_token)
