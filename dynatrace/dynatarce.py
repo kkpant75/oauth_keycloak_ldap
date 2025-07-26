@@ -3,7 +3,7 @@ import json
 
 url = "https://lsm93412.live.dynatrace.com/api/v2/logs/ingest"
 headers = {
-    "Authorization": "Api-Token dt0c01.7EDLZFZ33DVD55XOQRJI6Z4L.BWK5LRASW3XNDY5X3V66XAGQKSAZJFXJPCJL5DGLZEUC5WUMZQ66MON5ITVAHX5KR",
+    "Authorization": "Api-Token ",
     "Content-Type": "application/json; charset=utf-8"
 }
 
